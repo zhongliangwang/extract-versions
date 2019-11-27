@@ -1,16 +1,15 @@
-import * as core from '@actions/core';
-import {wait} from './wait'
+import * as core from "@actions/core";
 
 async function run() {
   try {
-    const ms = core.getInput('milliseconds');
-    console.log(`Waiting ${ms} milliseconds ...`)
-
-    core.debug((new Date()).toTimeString())
-    await wait(parseInt(ms, 10));
-    core.debug((new Date()).toTimeString())
-
-    core.setOutput('time', new Date().toTimeString());
+    const fullVersion = core.getInput("version", { required: true });
+    const versionRegex = /\d+\.\d+\.\d+/;
+    const result = versionRegex.exec(fullVersion);
+    if (result) {
+      core.setOutput("version", result[0]);
+    } else {
+      core.setFailed("Unable to extract a version label from the input.");
+    }
   } catch (error) {
     core.setFailed(error.message);
   }
