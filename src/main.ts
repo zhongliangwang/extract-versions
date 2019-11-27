@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 
-async function run() {
+function run() {
   try {
     const fullVersion = core.getInput("version", { required: true });
     const versionRegex = /\d+\.\d+\.\d+/;
