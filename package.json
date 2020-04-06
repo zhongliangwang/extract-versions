@@ -20,14 +20,14 @@
   "author": "YourNameOrOrganization",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.3"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.14",
-    "jest": "^24.9.0",
-    "jest-circus": "^24.9.0",
-    "ts-jest": "^24.2.0",
-    "typescript": "^3.7.2"
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "jest": "^25.2.7",
+    "jest-circus": "^25.2.7",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
   }
 }
